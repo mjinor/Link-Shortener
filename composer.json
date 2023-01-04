@@ -1,0 +1,27 @@
+{
+    "name": "mjinor/mja_shorturl",
+    "description": "Url shortener mini project for saba idea",
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "Mjinor\\MjaShorturl\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "M.Javad Amirbeiki",
+            "email": "mj.amirbeiki@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "bramus/router": "dev-master",
+        "vlucas/phpdotenv": "5.5.x-dev",
+      "ext-pdo": "*",
+        "rakit/validation": "dev-master",
+      "ext-json": "*",
+        "predis/predis": "2.0.x-dev"
+    }
+}

@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "bae03a72-eb9c-46d7-9fa8-02deda28466a",
+		"name": "MJ ShortUrl",
+		"description": "This is an api documentation of short link maker designed by m.javad amirbeiki",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Mohammad Javad",
+							"type": "default"
+						},
+						{
+							"key": "family",
+							"value": "Amirbeiki",
+							"type": "default"
+						},
+						{
+							"key": "username",
+							"value": "mjinor",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "default"
+						},
+						{
+							"key": "confirm_password",
+							"value": "12345",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "mjinor",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Of Mine Short Links",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "MJ HHNcmntcJvi6h3Ln%rnMUjb9wt#&tiY@pIqmV6mP^kukqVE@fzSB8YkHc8J%KfRFlsFGSe#8uzOvQbiVPsYodqChD0KL&h#7aq&S",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/url/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"url",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Short Link",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "MJ HHNcmntcJvi6h3Ln%rnMUjb9wt#&tiY@pIqmV6mP^kukqVE@fzSB8YkHc8J%KfRFlsFGSe#8uzOvQbiVPsYodqChD0KL&h#7aq&S",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "link",
+							"value": "http://google.com",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/url/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"url",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Short Link",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "MJ HHNcmntcJvi6h3Ln%rnMUjb9wt#&tiY@pIqmV6mP^kukqVE@fzSB8YkHc8J%KfRFlsFGSe#8uzOvQbiVPsYodqChD0KL&h#7aq&S",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "link_id",
+							"value": "7",
+							"type": "default"
+						},
+						{
+							"key": "new_link",
+							"value": "http://facebook.com",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/url/edit",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"url",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Short Link",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "MJ HHNcmntcJvi6h3Ln%rnMUjb9wt#&tiY@pIqmV6mP^kukqVE@fzSB8YkHc8J%KfRFlsFGSe#8uzOvQbiVPsYodqChD0KL&h#7aq&S",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "link_id",
+							"value": "7",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/url/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"url",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
